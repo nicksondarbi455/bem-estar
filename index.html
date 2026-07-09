@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width initial-scale=1.0"/> <!--ajusta a tela para diferentes dispositivos-->
+    <title>Minhas consultas Organizador Médico </title>
+    <link rel="stylesheet" href="styles.css"/> <!--vinculando arquivo css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS entra aqui */
+    </style>
+</head>
+
+<body>
+    <header class="topo"> <!--Criar um cabeçario-->
+        <div class="logo">🩺 Bem-estar </div><!--cria uma caixa-->
+        <nav aria-label="principal">
+            <a href="#proximas">Próximas Consultas</a><!--link que levam a outra pagina/botão-->
+            <a href="#historico">Histórico</a>
+            <a href="#anexos">Anexos</a>
+        </nav>
+    </header>
+    <main>
+        <section class="saudacao"><!--quando adicionamos a class, usamos ela para chamar no css-->
+            <h1>Olá, dona Lúcia! </h1>
+            <p>Você tem <strong>2 consultas nessa semana!</strong></p>
+        </section>
+
+        <section id="proximas"><!--vicula um conteudo no link que clicou-->
+            <h2>Próximas consultas</h2>
+            <article class="consulta">
+                <h3>Dra Mariana Couto - Cardiologista</h3>
+                <time datetime="2026-07-08T14:30">Quarta-feira, 8 de julho , as 14:30</time>
+                <p>Hostipal São lucas, Sala 415</p>
+                <p class="lembrete">Lembrar de levar exames de sangue</p>
+            </article>
+            <br><!--quebra de linha-->
+            <article class="consulta">
+                <h3>Dra Rodrigo - Psiquiatra</h3>
+                <time datetime="2026-07-08T09:00">Quarta-feira, 8 de julho , as 09:00</time>
+                <p>Hostipal Hapvidaa, Sala 300</p>
+                <p class="lembrete">Lembrar de levar a receita</p>
+            </article>
+        </section>
+
+        <section id="historico" aria-labelledby="t-historico">
+            <h3 id="t-historico">Histórico Médico</h3>
+            <table>
+                <caption>Últimas consultas realizadas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Profissional</th>
+                        <th scope="col">Observações</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10/06/2026</td>
+                        <td>Dra. Carlos Silva</td>
+                        <td>Retorno de exames</td>
+                    </tr>
+                    <tr>
+                        <td>15/05/2026</td>
+                        <td>Dr. Carlos</td>
+                        <td>Retorno de exames</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</body>
+</html>
