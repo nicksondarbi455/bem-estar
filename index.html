@@ -21,6 +21,7 @@
             <a href="#proximas">Próximas Consultas</a><!--link que levam a outra pagina/botão-->
             <a href="#historico">Histórico</a>
             <a href="#anexos">Anexos</a>
+            <a href="#midias">Midia</a>
         </nav>
     </header>
     <main>
@@ -41,7 +42,7 @@
             <article class="consulta">
                 <h3>Dra Rodrigo - Psiquiatra</h3>
                 <time datetime="2026-07-08T09:00">Quarta-feira, 8 de julho , as 09:00</time>
-                <p>Hostipal Hapvidaa, Sala 300</p>
+                <p>Hostipal Hapvida, Sala 300</p>
                 <p class="lembrete">Lembrar de levar a receita</p>
             </article>
         </section>
@@ -73,6 +74,98 @@
             </table>
         </section>
 
-    </main>
-</body>
+        <section id="anexos" aria-labelledby="t-anexos"> <!--  -->
+            <h2 id="t-anexos">Exames anexados</h2>
+
+            <ul class="anexos">
+                <li>📄Hemograma - 02/04/2026</li>
+                <li>📄Eletrocardiograma - 14/03/2026</li>
+                <li>📄Raio-x - 28/01/26</li>
+            </ul>
+
+            <button type="button">Anexar novo exame</button>
+        </section>
+        
+        <section id="midias" aria-labelledby="t-midias">
+            <h2 id="t-midias">Galeria de Mídias</h2>
+            <h3>Imagens Informativas</h3>
+            <p>
+                <img
+                    src="imagens/teste2.PNG"
+                    alt="Imagem que define a fachada da clinica"
+                    width="300"
+                    height="200"/>
+
+                <img
+                    src="https://plus.unsplash.com/premium_photo-1671721439617-491242a0507f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1lZGljaW5hfGVufDB8fDB8fHww"
+                    alt="Imagem de remedios"
+                    width="300"
+                    height="500"/>
+                
+            </p>
+                
+                <h3>Instruções em vídeo</h3>
+                <h4>Como chegar à nossa unidade</h4>
+                <video controls width="300">
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+                
+
+                <video controls width="300">
+                    <source src="https://cdn.pixabay.com/video/2026/06/20/359535_large.mp4" type="video/mp4"/>
+                </video>
+
+                <h4>Orientações vindas ao Youtube sobre Saúde</h4>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/MKmk07QjNwQ?si=BE7rgSMbyoK3lOsu"
+                    title="video de drauzio varella"
+                    allowfullscreen></iframe>
+
+                <h3>Instruções em Áudio</h3>
+                <p>
+                    <audio controls>
+                        <source src="" type="audio/mpeg"/>
+                    </audio>
+                </p>
+                <section aria-labelledby="t-prefs">
+                    <h2 id="t-prefs">Receber lembrestes por e-mail</h2>
+                    <form
+                        action="mailto:lembretes@bemestar.app"
+                        method="post"
+                        enctype="text/plain">
+                        
+                        <p>
+                            <label for="email">Seu e-email</label> <br>
+
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                required
+                                placeholder="voce@exemplo.com"/>
+                        </p>
+
+                        <p>
+                            <label  for="quando">Quando avisar</label> <br>
+
+                            <select id="quando" name="quando">
+                                <option>10h antes</option>
+                                <option>2h antes</option>
+                                <option>no dia anterior</option>
+                            </select>
+                        </p>
+
+                        <button type="submit">Quero receber lembretes</button>
+                    
+                    
+                    </form>
+
+                </section>
+        </main>
+        <footer>
+            <p>Feito com amor para cuidar de você🎗</p>
+        </footer>
+    </body>
 </html>
