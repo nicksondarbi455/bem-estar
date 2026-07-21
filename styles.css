@@ -1,0 +1,75 @@
+:root{
+    /*defiine */
+    --verde-profundo: #03876e;
+    --verde-suave: #81eacd;
+    --verde-intermediario: #42b99e;
+    --raio: 12px;
+    --sombra: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    --transicao: all 0.3s ease-in-out;
+    --texto: #080808;
+    --fundo: #faf6f6;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--texto);
+    background-color: var(--fundo);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.topo{
+    background: var(--verde-profundo);
+    color: #ffffff;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7)
+}
+.topo .logo{
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+}
+.topo nav a{
+    font-size: 20px;
+    padding: 12px 10px;
+    color: #f8f6f6;
+    margin-left: 2px;
+    text-decoration: none;
+    font-weight: 200;
+    transition: var(--transicao);
+    border-radius: 20px;
+}
+.topo nav a:hover {
+    color: #ffffff;
+    background: rgba(132, 245, 201, 0.2);
+}
+.topo nav a:focus-visible{
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+.saudacao h1{
+    font-size: 40px;
+    color: var(--verde-profundo);
+    letter-spacing: -0.5px;
+}
+.saudacao p{
+    color: var(--verde-intermediario);
+    margin-top: 6px;
+    font-size: 20px;
+}
+main > section {
+    margin-top: 40px;   
+}
