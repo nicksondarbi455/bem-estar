@@ -1,172 +1,286 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width initial-scale=1.0"/> <!--ajusta a tela para diferentes dispositivos-->
-    <title>Minhas consultas Organizador Médico </title>
-    <link rel="stylesheet" href="styles.css"/> <!--vinculando arquivo css-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Yuyu&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Minhas Consultas | Organizador Médico</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <style>
-        /* CSS entra aqui */
-       
-    </style>
-</head>
-
-<body>
-    <header class="topo"> <!--Criar um cabeçario-->
-        <div class="logo">🩺 Bem-estar </div><!--cria uma caixa-->
-        <nav aria-label="principal">
-            <a href="#proximas">Próximas Consultas</a><!--link que levam a outra pagina/botão-->
-            <a href="#historico">Histórico</a>
-            <a href="#anexos">Anexos</a>
-            <a href="#midias">Midia</a>
-        </nav>
+  <body>
+    <header class="topo">
+      <div class="logo">🩺 Bem-estar</div>
+      <nav aria-label="principal">
+        <a href="#proximas">Próximas Consultas</a>
+        <a href="#historico">Histórico</a>
+        <a href="#anexos">Anexos</a>
+        <a href="#midias">Mídias</a>
+      </nav>
     </header>
     <main>
-        <section class="saudacao"><!--quando adicionamos a class, usamos ela para chamar no css-->
-            <h1>Olá, dona Lúcia! </h1>
-            <p>Você tem <strong>2 consultas nessa semana!</strong></p>
-        </section>
+      <section class="saudacao">
+        <h1>Olá, dona Lúcia! ✨</h1>
+        <p>Você tem <strong>2 consultas</strong> nessa semana!</p>
+      </section>
 
-        <section id="proximas"><!--vicula um conteudo no link que clicou-->
-            <h2>Próximas consultas</h2>
-            <article class="consulta">
-                <h3>Dra Mariana Couto - Cardiologista</h3>
-                <time datetime="2026-07-08T14:30">Quarta-feira, 8 de julho , as 14:30</time>
-                <p>Hostipal São lucas, Sala 415</p>
-                <p class="lembrete">Lembrar de levar exames de sangue</p>
-            </article>
-            <br><!--quebra de linha-->
-            <article class="consulta">
-                <h3>Dra Rodrigo - Psiquiatra</h3>
-                <time datetime="2026-07-08T09:00">Quarta-feira, 8 de julho , as 09:00</time>
-                <p>Hostipal Hapvida, Sala 300</p>
-                <p class="lembrete">Lembrar de levar a receita</p>
-            </article>
-        </section>
+      <section id="proximas">
+        <h2>Próximas Consultas</h2>
 
-        <section id="historico" aria-labelledby="t-historico">
-            <h3 id="t-historico">Histórico Médico</h3>
-            <table>
-                <caption>Últimas consultas realizadas</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Data</th>
-                        <th scope="col">Profissional</th>
-                        <th scope="col">Observações</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>10/06/2026</td>
-                        <td>Dra. Carlos Silva</td>
-                        <td>Retorno de exames</td>
-                    </tr>
-                    <tr>
-                        <td>15/05/2026</td>
-                        <td>Dr. Carlos</td>
-                        <td>Retorno de exames</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <article class="consulta">
+          <time datetime="2026-07-08T07:30"
+            >Quarta-feira, 8 de Julho, às 07h30</time
+          >
+          <h3><strong>Hospital São Lucas | Sala 415</strong></h3>
+          <p>Dra Mariana Couto - Cardiologista</p>
+          <p class="lembrete">Lembrar de levar exames de sangue</p>
+        </article>
+        <br />
+        <article class="consulta">
+          <time datetime="2026-07-10T09:30">
+            Sexta-feira, 10 de Julho, às 09h30</time
+          >
+          <h3><strong>Hospital Hapvida | Sala 300</strong></h3>
+          <p>Dr Rodrigo - Psiquiatra</p>
+          <p class="lembrete">Lembrar de levar o documento de identificação</p>
+        </article>
+      </section>
+      <!-- NOVA CONSULTA -->
+      <section id="nova-consulta" aria-labelledby="t-nova-consulta">
+        <h2 id="t-nova-consulta">Adicionar Nova Consulta</h2>
 
-        <section id="anexos" aria-labelledby="t-anexos"> <!--  -->
-            <h2 id="t-anexos">Exames anexados</h2>
+        <form action="#" method="post">
+          <p>
+            <label for="hospital">Hospital ou Clínica</label><br />
+            <input
+              type="text"
+              id="hospital"
+              name="hospital"
+              placeholder="Ex.: Hospital São Lucas"
+              required
+            />
+          </p>
 
-            <ul class="anexos">
-                <li>📄Hemograma - 02/04/2026</li>
-                <li>📄Eletrocardiograma - 14/03/2026</li>
-                <li>📄Raio-x - 28/01/26</li>
-            </ul>
+          <p>
+            <label for="medico">Médico(a)</label><br />
+            <input
+              type="text"
+              id="medico"
+              name="medico"
+              placeholder="Ex.: Dra. Mariana Couto"
+              required
+            />
+          </p>
 
-            <button type="button">Anexar novo exame</button>
-        </section>
-        
-        <section id="midias" aria-labelledby="t-midias">
-            <h2 id="t-midias">Galeria de Mídias</h2>
-            <h3>Imagens Informativas</h3>
-            <p>
-                <img
-                    src="imagens/teste2.PNG"
-                    alt="Imagem que define a fachada da clinica"
-                    width="300"
-                    height="200"/>
+          <p>
+            <label for="especialidade">Especialidade</label><br />
+            <input
+              type="text"
+              id="especialidade"
+              name="especialidade"
+              placeholder="Ex.: Cardiologia"
+              required
+            />
+          </p>
 
-                <img
-                    src="https://plus.unsplash.com/premium_photo-1671721439617-491242a0507f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1lZGljaW5hfGVufDB8fDB8fHww"
-                    alt="Imagem de remedios"
-                    width="300"
-                    height="500"/>
-                
-            </p>
-                
-                <h3>Instruções em vídeo</h3>
-                <h4>Como chegar à nossa unidade</h4>
-                <video controls width="300">
-                    <source src="videos/video1.mp4" type="video/mp4">
-                </video>
-                
+          <p>
+            <label for="data">Data da consulta</label><br />
+            <input
+              type="date"
+              id="data"
+              name="data"
+              required
+            />
+          </p>
 
-                <video controls width="300">
-                    <source src="https://cdn.pixabay.com/video/2026/06/20/359535_large.mp4" type="video/mp4"/>
-                </video>
+          <p>
+            <label for="hora">Horário</label><br />
+            <input
+              type="time"
+              id="hora"
+              name="hora"
+              required
+            />
+          </p>
 
-                <h4>Orientações vindas ao Youtube sobre Saúde</h4>
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/MKmk07QjNwQ?si=BE7rgSMbyoK3lOsu"
-                    title="video de drauzio varella"
-                    allowfullscreen></iframe>
+          <p>
+            <label for="local">Sala ou Local</label><br />
+            <input
+              type="text"
+              id="local"
+              name="local"
+              placeholder="Ex.: Sala 415"
+            />
+          </p>
 
-                <h3>Instruções em Áudio</h3>
-                <p>
-                    <audio controls>
-                        <source src="" type="audio/mpeg"/>
-                    </audio>
-                </p>
-                <section aria-labelledby="t-prefs">
-                    <h2 id="t-prefs">Receber lembrestes por e-mail</h2>
-                    <form
-                        action="mailto:lembretes@bemestar.app"
-                        method="post"
-                        enctype="text/plain">
-                        
-                        <p>
-                            <label for="email">Seu e-email</label> <br>
+          <p>
+            <label for="lembrete">Lembrete</label><br />
+            <textarea
+              id="lembrete"
+              name="lembrete"
+              rows="4"
+              placeholder="Ex.: Levar exames, documento de identidade..."
+            ></textarea>
+          </p>
 
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                required
-                                placeholder="voce@exemplo.com"/>
-                        </p>
+          <button type="submit">Salvar Consulta</button>
+          <button type="reset">Limpar</button>
+        </fo
+rm>      </section>
+      <!-- HISTÓRICO -->
+      <section id="historico" aria-labelledby="t-historico">
+        <h2 id="t-historico">Histórico Médico</h2>
+        <table>
+          <caption>
+            Últimas consultas realizadas
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Profissional</th>
+              <th scope="col">Observações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10/06/2026</td>
+              <td>Dra. Ana Paula</td>
+              <td>Consulta de rotina</td>
+            </tr>
+            <tr>
+              <td>15/06/2026</td>
+              <td>Dr. Carlos Silva</td>
+              <td>Retorno de exames</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-                        <p>
-                            <label  for="quando">Quando avisar</label> <br>
+      <section id="anexos" aria-labelledby="t-anexos">
+        <h2 id="t-anexos">Exames anexados</h2>
 
-                            <select id="quando" name="quando">
-                                <option>10h antes</option>
-                                <option>2h antes</option>
-                                <option>no dia anterior</option>
-                            </select>
-                        </p>
+        <ul class="anexos">
+          <li>📄 Hemograma - 02/04/2026</li>
+          <li>📄 Eletrocardiograma - 14/03/2026</li>
+          <li>📄 Raio-x - 28/01/26</li>
+        </ul>
 
-                        <button type="submit">Quero receber lembretes</button>
-                    
-                    
-                    </form>
+        <button type="button">+ Anexar novo exame</button>
+      </section>
 
-                </section>
-        </main>
-        <footer>
-            <p>Feito com amor para cuidar de você🎗</p>
-        </footer>
-    </body>
+      <section id="midias" aria-labelledby="t-midias">
+        <h2 id="t-midias">Galeria de Mídias</h2>
+        <h3>Imagens Informativas</h3>
+        <p>
+          <img
+            src="imagens/logo.png"
+            alt="Imagem que define a fachada da clínica"
+            width="300"
+            height="200"
+          />
+
+          <img
+            src="https://plus.unsplash.com/premium_photo-1664392439710-c706f3e39024?q=80&w=446&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Imagem de remédios diversos"
+            width="200"
+            height="200"
+          />
+        </p>
+
+        <h3>Instruções em vídeo</h3>
+        <h4>Como chegar à nossa unidade</h4>
+        <video controls width="300">
+          <source src="videos/Characters_Peach.webm" type="video/webm" />
+          Seu navegador não suporta a reprodução de vídeo.
+        </video>
+
+        <h4>Orientações gerais de saúde</h4>
+        <video controls width="300">
+          <source
+            src="https://cdn.pixabay.com/video/2019/02/23/21617-319452308_tiny.mp4"
+            type="video/mp4"
+          />
+
+          Seu navegador não suporta a reprodução de vídeo.
+        </video>
+
+        <h4>Orientações vindas do Youtube sobre Saúde</h4>
+        <iframe
+          width="300"
+          height="225"
+          src="https://www.youtube.com/embed/9q7WaQqtWK4?si=-jbythXXavxyCezz"
+          title="Orientações do príncipe Drauzio Varella"
+          allowfullscreen
+        ></iframe>
+
+        <h3>Instruções em Áudio</h3>
+
+        <h4>Mensagem de boas-vindas do médico</h4>
+        <p>
+          <audio controls>
+            <source
+              src="audios/Crazy - Patrick Patrikios.mp3"
+              type="audio/mpeg"
+            />
+
+            Seu navegador não suporta reprodução de áudio.
+          </audio>
+        </p>
+
+        <h4>Podcast sobre bem estar da internet</h4>
+        <p>
+          <audio controls>
+            <source
+              src="https://www.w3schools.com/html/horse.mp3"
+              type="audio/mpeg"
+            />
+
+            Seu navegador não suporta reprodução de áudio.
+          </audio>
+        </p>
+      </section>
+
+      <section aria-labelledby="t-prefs">
+        <h2 id="t-prefs">Receber lembretes por e-mail</h2>
+
+        <form
+          action="mailto:lembretes@bemestar.app"
+          method="post"
+          enctype="text/plain"
+        >
+          <p>
+            <label for="email">Seu e-mail</label> <br />
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="voce@exemplo.com"
+            />
+          </p>
+
+          <p>
+            <label for="quando">Quando avisar</label> <br />
+
+            <select id="quando" name="quando">
+              <option>24h antes</option>
+              <option>2h antes</option>
+              <option>No dia anterior</option>
+            </select>
+          </p>
+
+          <button type="submit">Quero receber lembretes</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Feito com amor para cuidar de você 😊</p>
+    </footer>
+  </body>
 </html>
